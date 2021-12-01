@@ -1,0 +1,33 @@
+
+Preview of Data and Testing Flow
+_______________________________________________________________________________
+We classify 2 type of login behavior for training and predict the user ,
+Form1 for insert data to the test.text file, then Form2 for loading file and running login preditions.
+
+Index 1 =Label (Human / Spam)
+Index 2 = Hotkey
+Index 3 = Backspace
+Index 4 = Press2Keys at the same time
+Index 5 = KeyInPassword Time
+
+spam,0,0,0,5
+human,17,0,10
+human,18,0,2,9
+
+
+Login prediction crartical
+__________________________________________________________________________________
+Classify as "Human" login 
+Using Backspace
+Using the HotKey Backspace, Alt,Option, Arrow Keys
+press 2 key at same time (Holding Shift+ A, B..)
+login time >= 8 seconds
+
+
+
+Learning algorithm
+___________________________________________________________________________________
+Stochastic Dual Coordinate Ascent Methods (SDCA) , try to use this Multi-class classification algorithms supported in ML.NET,
+also it can expend to insert many type of login types.
+
+new StochasticDualCoordinateAscentClassifier()
